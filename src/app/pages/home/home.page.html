@@ -1,13 +1,47 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-buttons slot = "start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>SkeletonApp</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">home</ion-title>
+      <ion-title class="ion-text-center" size="large">Bienvenido</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <h1 class="ion-text-center">!Bienvenido!</h1>
+  <h3 class="ion-text-center">{{ nombreUsuario }}</h3>
+  <h2 class="ion-text-center">Informacion Adicional</h2>
+  <ion-input fill="outline" [(ngModel)]="nombreUsuario">Nombre</ion-input>
+  <ion-input fill="outline" [(ngModel)]="apellidoUsuario">Apellido</ion-input>
+  <h4 class="ion-text-left">Nivel educacional</h4>
+  <ion-item>
+    <ion-label>Nivel Educacional</ion-label>
+    <ion-select interface="popover" placeholder="Seleccione una opción">
+      <ion-select-option value="opcion1">Basica Completa</ion-select-option>
+      <ion-select-option value="opcion2">Media Completa</ion-select-option>
+      <ion-select-option value="opcion3">Superior</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <h4 class="ion-text-left">Fecha Nacimiento</h4>
+  
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>Calendario</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content"><ion-datetime locale="es-ES"></ion-datetime></div>
+    </ion-accordion>
+  </ion-accordion-group>
+
+  <ion-button (click)="limpiar()">Limpiar</ion-button>
+   <ion-button (click)="mostrarDatos()">Mostrar Datos</ion-button>
+
+
 </ion-content>
