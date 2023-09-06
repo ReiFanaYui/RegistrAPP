@@ -1,8 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
@@ -12,20 +7,24 @@
   </ion-header>
 
   <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"></ion-img>
-  <h6 class="ion-text-center">Aquí comienza todo</h6>
-  <h3 class="ion-text-center">Bienvenido!</h3>
+  <ion-text class="ion-text-center">
+    <h1>¡Bienvenido 🎉!</h1>
+    <p>Aquí es donde todo comienza.</p>
+  </ion-text>
 
   <ion-label position="floating">Usuario</ion-label>
-  <ion-input fill="outline" maxlength="8" minLength="3" [(ngModel)]="usuario"></ion-input>
+  <ion-input fill="outline" maxlength="8" minLength="3" [(ngModel)]="usuario" shape="round"></ion-input>
 
   <ion-label position="floating">Contraseña</ion-label>
-  <ion-input fill="outline" type="password" maxlength="4" [(ngModel)]="contrasena2"></ion-input>
+  <ion-input fill="outline" type="password" maxlength="4" [(ngModel)]="contrasena2" shape="round"></ion-input>
 
-  <ion-button expand="block" (click)="login()">Iniciar Sesión</ion-button>
+  <ion-button expand="block" (click)="login()" shape="round">
+    <ion-icon name="enter-outline"></ion-icon>Iniciar Sesión</ion-button>
 
  <!--  <ion-button expand="block" (click)="agregarUsuario()">Agregar nuevo usuario</ion-button> -->
 
-  <ion-button expand="block" (click)="olvideContrasena()">Olvidé mi Contraseña</ion-button>
+  <ion-button expand="block" (click)="olvideContrasena()" shape="round">
+    <ion-icon name="lock-closed-outline"></ion-icon>Olvidé mi Contraseña</ion-button>
 
   <!--Mensaje de error-->
   <p>{{mensajeError}}</p>

@@ -1,0 +1,39 @@
+*{
+    font-weight: 300;
+}
+
+ion-content{
+    --background: #fafafa;
+}
+
+ion-text{
+    h1{
+        font-size: 42px;
+    }
+    p{
+        font-size: 14;
+        color: #696969;
+    }
+}
+
+ion-avatar{
+    height: 12px;
+    width: 12px;
+    margin-right: 7px;
+}
+
+ion-input{
+    margin-bottom: 28px;
+}
+
+ion-label{
+    padding-left: 10px;
+}
+
+ion-img{
+    margin-top: 40px;
+}
+
+ion-icon{
+    padding-right: 12px;
+}
