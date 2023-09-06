@@ -1,10 +1,11 @@
+ion-content{
+    --background:linear-gradient(to right, #2f94c3, #86c7df);
+}
+
 *{
     font-weight: 300;
 }
 
-ion-content{
-    --background: #fafafa;
-}
 
 ion-text{
     h1{
@@ -12,7 +13,7 @@ ion-text{
     }
     p{
         font-size: 14;
-        color: #696969;
+        color: #5d5858;
     }
 }
 

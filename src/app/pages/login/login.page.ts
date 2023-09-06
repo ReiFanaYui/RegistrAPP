@@ -123,6 +123,7 @@ export class LoginPage implements OnInit {
             // Verifica si se encontró al usuario
             if (index != -1) {
               this.usuarios[index].contrasena = data.nuevaContrasena;
+              this.mostrarMensajeError('¡Contraseña recuperada con éxito!');
             } else {
               this.mostrarMensajeError('Usuario no encontrado');
             }
@@ -136,7 +137,7 @@ export class LoginPage implements OnInit {
   
   async mostrarMensajeError(mensaje: string) {
     const alert = await this.alertController.create({
-      header: 'Error',
+      header: 'Mensaje',
       message: mensaje,
       buttons: ['OK']
     });
