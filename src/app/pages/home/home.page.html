@@ -8,6 +8,19 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h3 class="ion-text-center">¡Bienvenido {{ nombreUsuario }}!</h3>
+  <div class="main_content">
+
+    <div class="user_div">
+      <div class="first_div">
+        <ion-label class="bienvenido">Bienvenido</ion-label>
+        <ion-label class="usuario">{{ nombreUsuario }}</ion-label>
+      </div>
+      <div class="user_back" [style.backgroundImage]="'url(assets/icon/pfp-cat.jpg)'"></div>
+    </div>
+
+    <div class="content_div">
+
+    </div>
+  </div>
   <img src="assets/icon/wip.gif" alt="trabajo en progreso">
 </ion-content>
