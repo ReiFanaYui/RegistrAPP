@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -8,30 +8,27 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
+  subjects: any[] = [];
   nombreUsuario: string = '';
   apellidoUsuario: string = '';
 
-  constructor(private route: ActivatedRoute, private alertController: AlertController) { }
+  constructor(private route: ActivatedRoute, private alertController: AlertController, private router: Router) { }
 
   ngOnInit() {
     const state = window.history.state;
-     this.nombreUsuario = state.nombreUsuario;
+    this.nombreUsuario = state.nombreUsuario;
+
+    this.subjects.push({img: 'assets/icon/horario.jpg', name: 'Horario'})
+    this.subjects.push({img: 'assets/icon/asistencia.png', name: 'Asistencia'})
+    this.subjects.push({img: 'assets/icon/camara.png', name: 'Camara'})
+    this.subjects.push({img: 'assets/icon/perfil.png', name: 'Perfil'})
+    this.subjects.push({img: 'assets/icon/perfil.png', name: 'Porsiacaso'})
+    this.subjects.push({img: 'assets/icon/perfil.png', name: 'Salir'})
   }
 
-  async mostrarDatos(){
-    const alert = await this.alertController.create({
-      header: 'Información del Usuario',
-      message: `Nombre: ${this.nombreUsuario} Apellido: ${this.apellidoUsuario}`,
-      buttons: ['OK']
-    });
+  goToSubject(){
 
-    await alert.present();
   }
 
-  limpiar() {
-    this.nombreUsuario = '';
-    this.apellidoUsuario = '';
-  }
 
 }

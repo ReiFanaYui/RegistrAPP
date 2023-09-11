@@ -1,5 +1,5 @@
 ion-content{
-    --background:linear-gradient(to right, #2f94c3, #86c7df);
+    --background:linear-gradient(to right, #2a8bb8, #86c7df);
 }
 
 img{
@@ -8,16 +8,17 @@ img{
 
 .main_content{
     width: 100%;  
+
     ion-label{
         display: block;
         text-align: center;
     }
-    
+
     .user_div{
         padding: 20px;
         width: 100%;
         height: 260px;
-        background:linear-gradient(to right, #2f94c3, #86c7df);
+        background:linear-gradient(to right, #2a8bb8, #86c7df);
         display: flex;
         padding-top: 28px;
         justify-content: space-between;
@@ -25,25 +26,70 @@ img{
         .first_div{
             padding-top: 20px;
             .bienvenido{
-                font-size: 18px;
+                font-size: 22px;
                 color: white;
                 font-weight: 500;
             }
             .usuario{
-                font-size: 24px;
+                font-size: 28px;
                 color: white;
                 font-weight: 600;
             }
         }
 
         .user_back{
-            height: 100px;
-            width: 80px;
+            height: 116px;
+            width: 92px;
             border: 3px solid white;
             background-position: top;
             background-size: cover;
             background-repeat: no-repeat;
+            border-radius: 8px;
         }
+    }
+
+    .content_div{
+        background: white;
+        width: 100%;
+        border-top-right-radius: 75px;
+        border-top-left-radius: 75px;
+        margin-top: -90px;
+        padding-top: 30px;
+
+        .hello_lbl{
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            margin-top: 1px;
+        }
+
+        ion-grid{
+            padding: 0px;
+        }
+
+        .col_div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 220px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+            background: white;
+            border-top-left-radius: 75px;
+            border-top-right-radius: 75px;
+            border-bottom-left-radius: 75px;
+            border-bottom-right-radius: 75px;
+
+            img{
+                width: 112px;
+                margin-bottom: 80px;
+            }
+
+
+        }
+
     }
 
 

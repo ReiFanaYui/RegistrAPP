@@ -1,12 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot = "start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <div class="main_content">
 
@@ -19,8 +10,17 @@
     </div>
 
     <div class="content_div">
-
+      <ion-label class="hello_lbl">Selecciona una opción:</ion-label>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="6" (click)= "goToSubject()" *ngFor="let item of (subjects)">
+            <div class="col_div">
+              <img src="{{item.img}}">
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </div>
   </div>
-  <img src="assets/icon/wip.gif" alt="trabajo en progreso">
+
 </ion-content>
