@@ -16,6 +16,7 @@
           <ion-col size="6" (click)= "goToSubject()" *ngFor="let item of (subjects)">
             <div class="col_div">
               <img src="{{item.img}}">
+              <ion-label class="col_title" position="stacked">{{ item.name }}</ion-label>
             </div>
           </ion-col>
         </ion-row>
