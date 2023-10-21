@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,7 @@ export class HomePage implements OnInit {
   nombreUsuario: string = '';
   apellidoUsuario: string = '';
 
-  constructor(private route: ActivatedRoute, private alertController: AlertController, private router: Router) { }
+  constructor(private route: ActivatedRoute, private alertController: AlertController, private router: Router,private navCtrl: NavController) { }
 
   ngOnInit() {
     const state = window.history.state;
@@ -24,6 +24,11 @@ export class HomePage implements OnInit {
     this.subjects.push({img: 'assets/icon/perfil.png', name: 'Perfil'})
     this.subjects.push({img: 'assets/icon/perfil.png', name: 'Porsiacaso'})
     this.subjects.push({img: 'assets/icon/perfil.png', name: 'Salir'})
+  }
+
+  limpiarLocalStorage() {
+    localStorage.clear(); // Esto eliminará todos los datos almacenados en localStorage
+    this.navCtrl.back();
   }
 
   goToSubject(){

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 //Importar Router para la navegación entre páginas :p
 import { Router, NavigationExtras } from '@angular/router';
 //Importar alertController para las alertas
-import { AlertController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -22,7 +22,7 @@ export class LoginPage implements OnInit {
   mensajeError: string ='';
 
   //Creando una instancia de Router y de AlertController
-  constructor(private router: Router, private alertController: AlertController) { }
+  constructor(private router: Router, private alertController: AlertController,public navCtrl: NavController) { }
 
   ngOnInit() {
   }
@@ -34,6 +34,9 @@ export class LoginPage implements OnInit {
     const usuarioEncontrado = this.usuarios.find(
       user => user.nombre == this.usuario && user.contrasena == this.contrasena2
     );
+    localStorage.setItem('ingresado','true');
+    this.navCtrl.navigateRoot('home');
+
 
     //Si el usuario es encontrado se navega hacía la page home omg
     if(usuarioEncontrado){
