@@ -34,8 +34,6 @@ export class LoginPage implements OnInit {
     const usuarioEncontrado = this.usuarios.find(
       user => user.nombre == this.usuario && user.contrasena == this.contrasena2
     );
-    localStorage.setItem('ingresado','true');
-    this.navCtrl.navigateRoot('home');
 
 
     //Si el usuario es encontrado se navega hacía la page home omg
@@ -45,7 +43,8 @@ export class LoginPage implements OnInit {
           nombreUsuario: usuarioEncontrado.nombre
         }
       }
-
+      localStorage.setItem('ingresado','true');
+      this.navCtrl.navigateRoot('home');
       this.router.navigate(['/home'], navigationExtras)
     }else{
       const alert = await this.alertController.create({

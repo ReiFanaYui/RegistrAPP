@@ -22,7 +22,7 @@ export class HomePage implements OnInit {
     this.subjects.push({img: 'assets/icon/asistencia.png', name: 'Asistencia'})
     this.subjects.push({img: 'assets/icon/camara.png', name: 'Camara'})
     this.subjects.push({img: 'assets/icon/perfil.png', name: 'Perfil'})
-    this.subjects.push({img: 'assets/icon/perfil.png', name: 'Porsiacaso'})
+    this.subjects.push({img: 'assets/icon/perfil.png', name: 'Noticias'})
     this.subjects.push({img: 'assets/icon/perfil.png', name: 'Salir'})
   }
 
@@ -31,8 +31,42 @@ export class HomePage implements OnInit {
     this.navCtrl.back();
   }
 
-  goToSubject(){
+  async goToSubject(subjectName: string){
+    if (subjectName === 'Horario') {
+      this.router.navigate([subjectName.toLowerCase()]);
+    } else if(subjectName === 'Asistencia') {
+      this.router.navigate([subjectName.toLowerCase()]);
+    }
+    else if(subjectName === 'Camara') {
+      this.router.navigate([subjectName.toLowerCase()]);
+    }
+    else if(subjectName === 'Perfil') {
+      this.router.navigate([subjectName.toLowerCase()]);
+    }
+    else if(subjectName === 'Noticias') {
+      this.router.navigate([subjectName.toLowerCase()]);
+    }
+    else if(subjectName === 'Salir') {    
+    const alert = await this.alertController.create({
+      header: 'Cerrar sesión',
+      message: '¿Estás seguro de que deseas cerrar sesión?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+        },
+        {
+          text: 'Aceptar',
+          handler: () => {
+            localStorage.clear(); // Limpiar almacenamiento local
+            this.navCtrl.back(); // Volver a la página anterior
+          },
+        },
+      ],
+    });
 
+    await alert.present();
+    }
   }
 
 
