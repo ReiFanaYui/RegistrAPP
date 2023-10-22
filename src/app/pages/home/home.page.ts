@@ -22,8 +22,8 @@ export class HomePage implements OnInit {
     this.subjects.push({img: 'assets/icon/asistencia.png', name: 'Asistencia'})
     this.subjects.push({img: 'assets/icon/camara.png', name: 'Camara'})
     this.subjects.push({img: 'assets/icon/perfil.png', name: 'Perfil'})
-    this.subjects.push({img: 'assets/icon/perfil.png', name: 'Noticias'})
-    this.subjects.push({img: 'assets/icon/perfil.png', name: 'Salir'})
+    this.subjects.push({img: 'assets/icon/noticias.png', name: 'Noticias'})
+    this.subjects.push({img: 'assets/icon/salir.png', name: 'Salir'})
   }
 
   limpiarLocalStorage() {

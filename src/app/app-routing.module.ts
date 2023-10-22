@@ -20,23 +20,23 @@ const routes: Routes = [
   },
   {
     path: 'horario',
-    loadChildren: () => import('./pages/horario/horario.module').then( m => m.HorarioPageModule)
+    loadChildren: () => import('./pages/horario/horario.module').then( m => m.HorarioPageModule),canActivate: [IngresadoGuard]
   },
   {
     path: 'asistencia',
-    loadChildren: () => import('./pages/asistencia/asistencia.module').then( m => m.AsistenciaPageModule)
+    loadChildren: () => import('./pages/asistencia/asistencia.module').then( m => m.AsistenciaPageModule),canActivate: [IngresadoGuard]
   },
   {
     path: 'camara',
-    loadChildren: () => import('./pages/camara/camara.module').then( m => m.CamaraPageModule)
+    loadChildren: () => import('./pages/camara/camara.module').then( m => m.CamaraPageModule),canActivate: [IngresadoGuard]
   },
   {
     path: 'perfil',
-    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule),canActivate: [IngresadoGuard]
   },
   {
     path: 'noticias',
-    loadChildren: () => import('./pages/noticias/noticias.module').then( m => m.NoticiasPageModule)
+    loadChildren: () => import('./pages/noticias/noticias.module').then( m => m.NoticiasPageModule),canActivate: [IngresadoGuard]
   }
 
 
