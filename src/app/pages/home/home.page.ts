@@ -59,7 +59,7 @@ export class HomePage implements OnInit {
           text: 'Aceptar',
           handler: () => {
             localStorage.clear(); // Limpiar almacenamiento local
-            this.navCtrl.back(); // Volver a la página anterior
+            this.router.navigate(["/login"])
           },
         },
       ],
