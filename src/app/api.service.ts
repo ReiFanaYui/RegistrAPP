@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = 'https://apis.digital.gob.cl/fl/feriados';
+  private apiUrl = 'https://jsonplaceholder.typicode.com'; // URL base de la API a consumir
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getDatos() {
-    return this.http.get(`${this.apiUrl}`);
+  getPosts(): Observable<any[]> {
+    return this.http.get<any[]>(`${this.apiUrl}/posts`);
   }
 }
