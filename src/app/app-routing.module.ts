@@ -37,7 +37,14 @@ const routes: Routes = [
   {
     path: 'noticias',
     loadChildren: () => import('./pages/noticias/noticias.module').then( m => m.NoticiasPageModule),canActivate: [IngresadoGuard]
-  }
+  },
+  {
+    path: 'no-encontrado',
+    loadChildren: () => import('./pages/no-encontrado/no-encontrado.module').then( m => m.NoEncontradoPageModule)
+  },
+  { path: '**', redirectTo: 'no-encontrado' 
+  },
+
 
 
 ];
