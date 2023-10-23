@@ -46,7 +46,7 @@ export class HomePage implements OnInit {
     else if(subjectName === 'Noticias') {
       this.router.navigate([subjectName.toLowerCase()]);
     }
-    else if(subjectName === 'Salir') {    
+    else if(subjectName === 'Salir') {
     const alert = await this.alertController.create({
       header: 'Cerrar sesión',
       message: '¿Estás seguro de que deseas cerrar sesión?',
