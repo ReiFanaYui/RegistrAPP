@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -9,10 +10,14 @@ import { ApiService } from 'src/app/api.service';
 export class NoticiasPage implements OnInit {
 
   posts: any[] = [];
-  constructor(private apiService: ApiService) { }
+  constructor(private navCtrl: NavController,private apiService: ApiService) { }
 
   ngOnInit() {
     this.loadPosts();
+  }
+
+  goBack() {
+    this.navCtrl.back();
   }
 
   loadPosts() {
