@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { Camera, CameraResultType } from '@capacitor/camera';
 
 @Component({
   selector: 'app-camara',
   templateUrl: './camara.page.html',
   styleUrls: ['./camara.page.scss'],
 })
+
+
+
 export class CamaraPage implements OnInit {
 
   constructor(private navCtrl: NavController) { }
@@ -16,5 +20,4 @@ export class CamaraPage implements OnInit {
 
   ngOnInit() {
   }
-
 }
