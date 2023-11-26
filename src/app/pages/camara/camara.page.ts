@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { Camera, CameraResultType } from '@capacitor/camera';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 
 @Component({
   selector: 'app-camara',
@@ -19,5 +19,19 @@ export class CamaraPage implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  imageSource: any;
+
+  takePicture = async () => {
+    const image = await Camera.getPhoto({
+      quality: 90,
+      allowEditing: false,
+      resultType: CameraResultType.DataUrl,
+      source:CameraSource.Prompt
+    });
+
+    this.imageSource=image.dataUrl;
+
   }
 }
