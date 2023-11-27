@@ -1,18 +1,22 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-button (click)="goBack()">
-        <ion-icon name="chevron-back" slot="start"></ion-icon>
-        Volver
-      </ion-button>
+      <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Camara</ion-title>
+    <ion-title>
+      Cámara
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <div id="container">
-    <img src="{{imageSource}}" style="width: 400px;"/>
-    <ion-button (click)="takePicture()">Camera</ion-button>
+<ion-content class="ion-padding">
+  <ion-button expand="full" (click)="takePicture()">Tomar Foto</ion-button>
+
+  <div *ngIf="imageSource">
+    <img [src]="imageSource" alt="Captured Image">
+  </div>
+
+  <div *ngIf="qrResult !== null">
+    <p>Resultado del Codigo QR: <a [href]="qrResult" target="_blank">{{ qrResult }}</a></p>
   </div>
 </ion-content>
