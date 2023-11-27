@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
 import { AlertController, NavController } from '@ionic/angular';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -41,7 +42,13 @@ export class HomePage implements OnInit {
       this.router.navigate([subjectName.toLowerCase()]);
     }
     else if(subjectName === 'Perfil') {
-      this.router.navigate([subjectName.toLowerCase()]);
+      const navigationExtras: NavigationExtras = {
+        state: {
+          nombreUsuario: this.nombreUsuario,
+        },
+      };
+  
+      this.router.navigate([subjectName.toLowerCase()], navigationExtras);
     }
     else if(subjectName === 'Noticias') {
       this.router.navigate([subjectName.toLowerCase()]);

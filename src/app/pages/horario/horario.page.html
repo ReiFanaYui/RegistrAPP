@@ -9,5 +9,74 @@
   </ion-toolbar>
 </ion-header>
 
+<ion-content>
+  <ion-list>
 
+    <!-- Lunes -->
+    <ion-item button (click)="toggleSection('lunes')">
+      <ion-label>Lunes</ion-label>
+      <ion-icon [name]="isSectionOpen('lunes') ? 'chevron-up-outline' : 'chevron-down-outline'"></ion-icon>
+    </ion-item>
 
+    <ion-card *ngIf="isSectionOpen('lunes')">
+      <!-- Contenido del horario para el lunes -->
+      <!-- Puedes agregar aquí tus clases y profesores para el lunes -->
+    </ion-card>
+
+    <!-- Martes -->
+    <ion-item button (click)="toggleSection('martes')">
+      <ion-label>Martes</ion-label>
+      <ion-icon [name]="isSectionOpen('martes') ? 'chevron-up-outline' : 'chevron-down-outline'"></ion-icon>
+    </ion-item>
+
+    <ion-card *ngIf="isSectionOpen('martes')">
+      <!-- Contenido del horario para el martes -->
+      <!-- Puedes agregar aquí tus clases y profesores para el martes -->
+    </ion-card>
+
+    <!-- Miércoles -->
+    <ion-item button (click)="toggleSection('miércoles')">
+      <ion-label>Miércoles</ion-label>
+      <ion-icon [name]="isSectionOpen('miércoles') ? 'chevron-up-outline' : 'chevron-down-outline'"></ion-icon>
+    </ion-item>
+
+    <ion-card *ngIf="isSectionOpen('miércoles')">
+      <!-- Contenido del horario para el miércoles -->
+      <!-- Puedes agregar aquí tus clases y profesores para el miércoles -->
+    </ion-card>
+
+    <!-- Jueves -->
+    <ion-item button (click)="toggleSection('jueves')">
+      <ion-label>Jueves</ion-label>
+      <ion-icon [name]="isSectionOpen('jueves') ? 'chevron-up-outline' : 'chevron-down-outline'"></ion-icon>
+    </ion-item>
+
+    <ion-card *ngIf="isSectionOpen('jueves')">
+      <!-- Contenido del horario para el jueves -->
+      <!-- Puedes agregar aquí tus clases y profesores para el jueves -->
+    </ion-card>
+
+    <!-- Viernes -->
+    <ion-item button (click)="toggleSection('viernes')">
+      <ion-label>Viernes</ion-label>
+      <ion-icon [name]="isSectionOpen('viernes') ? 'chevron-up-outline' : 'chevron-down-outline'"></ion-icon>
+    </ion-item>
+
+    <ion-card *ngIf="isSectionOpen('viernes')">
+      <!-- Contenido del horario para el viernes -->
+      <!-- Puedes agregar aquí tus clases y profesores para el viernes -->
+    </ion-card>
+
+        <!-- Sabado -->
+        <ion-item button (click)="toggleSection('sabado')">
+          <ion-label>Sabado</ion-label>
+          <ion-icon [name]="isSectionOpen('sabado') ? 'chevron-up-outline' : 'chevron-down-outline'"></ion-icon>
+        </ion-item>
+    
+        <ion-card *ngIf="isSectionOpen('sabado')">
+          <!-- Contenido del horario para el sabado -->
+          <!-- Puedes agregar aquí tus clases y profesores para el sabado -->
+        </ion-card>
+
+  </ion-list>
+</ion-content>

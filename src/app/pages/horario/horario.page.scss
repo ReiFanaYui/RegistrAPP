@@ -1,0 +1,16 @@
+  
+  ion-content {
+    ion-card {
+      --ion-background-color: #f0f0f0; // Color de fondo de las tarjetas
+    }
+  
+    ion-card-header {
+      --ion-background-color: #003366; // Color de fondo de las cabeceras de tarjetas
+      --ion-color-primary: #ffffff; // Color de texto y otros elementos primarios en las cabeceras
+    }
+  
+    ion-item {
+      --ion-background-color: #ffffff; // Color de fondo de los elementos de lista
+      --ion-color-primary: #003366; // Color de texto y otros elementos primarios en los elementos de lista
+    }
+  }

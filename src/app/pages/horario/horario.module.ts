@@ -18,3 +18,5 @@ import { HorarioPage } from './horario.page';
   declarations: [HorarioPage]
 })
 export class HorarioPageModule {}
+
+

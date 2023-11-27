@@ -1,0 +1,20 @@
+ion-card {
+    ion-img {
+      height: 200px; /* Ajusta la altura de la imagen según tus necesidades */
+    }
+  
+    ion-card-content {
+      ion-list {
+        ion-item {
+          ion-label {
+            font-weight: bold;
+          }
+        }
+      }
+  
+      ion-button {
+        margin-top: 20px; /* Ajusta el margen según tus necesidades */
+      }
+    }
+  }
+  

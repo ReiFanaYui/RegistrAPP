@@ -1,11 +1,41 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button (click)="goBack()">
         <ion-icon name="chevron-back" slot="start"></ion-icon>
         Volver</ion-button>
     </ion-buttons>
-    <ion-title>perfil</ion-title>
+    <ion-title>
+      Perfil del Estudiante
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
+<ion-content>
+  <ion-card>
+    <ion-img class="user_back" [style.backgroundImage]="'url(assets/icon/pfp-cat.jpg)'"></ion-img>
+    <ion-card-header>
+      <ion-card-title class="usuario">{{ nombreUsuario }}</ion-card-title>
+      <ion-card-subtitle>{{ carrera }}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Email:</ion-label>
+          <ion-text>{{ email }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Teléfono:</ion-label>
+          <ion-text>{{ telefono }}</ion-text>
+        </ion-item>
+        <ion-item>
+          <ion-label>Dirección:</ion-label>
+          <ion-text>{{ direccion }}</ion-text>
+        </ion-item>
+      </ion-list>
+
+      <ion-button expand="full" (click)="editarPerfil()">Editar Perfil</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
