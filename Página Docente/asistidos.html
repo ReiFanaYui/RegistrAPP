@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Asistidos</title>
+</head>
+<body class="bg-light">
+
+    <!--NAVBAR-->
+    <div>
+        <nav class="navbar custom-navbar">
+            <a class="navbar-brand">
+                <img src="/img/logo.png" width="200" height="50" class="d-inline-block align-top" alt="logo">
+            </a>
+            <span class="current-time"></span>
+        </nav>
+    </div>
+  <!--FIN NAVBAR-->
+
+    <!-- BOTÓN DE RETROCESO -->
+    <div class="back-button-container">
+        <a class="btn btn-light" href="javascript:history.back()">
+            <img src="/img/back-icon.png" width="60" height="60" class="d-inline-block align-top" alt="back-icon">
+        </a>
+    </div>
+    <!-- FIN BOTÓN DE RETROCESO -->
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- Título del curso -->
+                        <h1 class="text-center">Confirmados</h1>
+                    </div>
+                    <div class="card-body">
+                        <!-- Lista de 10 estudiantes -->
+                        <ul class="list-group" id="student-list">
+                            <!-- Nombres de estudiantes insertados estáticamente -->
+                            <li class="list-group-item justify-content-between align-items-center" style="display: none;">
+                                <div class="student-name">María Pérez López</div>
+                                <div>
+                                    <button class="btn" id="btn-ausente" onclick="marcarAusente()">Ausente</button>
+                                    <button class="btn" id="btn-presente" onclick="marcarPresente()">Presente</button>
+                                </div>
+                            </li>
+                            <!-- Repite el mismo patrón para cada estudiante -->
+                            <li class="list-group-item justify-content-between align-items-center" style="display: none;">
+                                <div class="student-name">Lucía González Rodríguez</div>
+                                <div>
+                                    <button class="btn" id="btn-ausente" onclick="marcarAusente()">Ausente</button>
+                                    <button class="btn" id="btn-presente" onclick="marcarPresente()">Presente</button>
+                                </div>
+                            </li>
+                            <li class="list-group-item justify-content-between align-items-center" style="display: none;">
+                                <div class="student-name">Andrea Martínez Alonso</div>
+                                <div>
+                                    <button class="btn" id="btn-ausente" onclick="marcarAusente()">Ausente</button>
+                                    <button class="btn" id="btn-presente" onclick="marcarPresente()">Presente</button>
+                                </div>
+                            </li>
+                            <li class="list-group-item justify-content-between align-items-center" style="display: none;">
+                                <div class="student-name">Fátima Ruiz Fernández</div>
+                                <div>
+                                    <button class="btn" id="btn-ausente" onclick="marcarAusente()">Ausente</button>
+                                    <button class="btn" id="btn-presente" onclick="marcarPresente()">Presente</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- Título del curso -->
+                        <h1 class="text-center">No Confirmados</h1>
+                    </div>
+                    <div class="card-body">
+                        <!-- Lista de 10 estudiantes -->
+                        <ul class="list-group" id="student-list">
+                            <!-- Nombres de estudiantes insertados estáticamente -->
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="student-name">Fátima Ruiz Fernández</div>
+                                <div>
+                                    <button class="btn" id="btn-ausente" onclick="marcarAusente()">Ausente</button>
+                                    <button class="btn" id="btn-presente" onclick="marcarPresente()">Presente</button>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="student-name">Juan Alonso Martínez</div>
+                                <div>
+                                    <button class="btn" id="btn-ausente" onclick="marcarAusente()">Ausente</button>
+                                    <button class="btn" id="btn-presente" onclick="marcarPresente()">Presente</button>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="student-name">José Ruiz Fernández</div>
+                                <div>
+                                    <button class="btn" id="btn-ausente" onclick="marcarAusente()">Ausente</button>
+                                    <button class="btn" id="btn-presente" onclick="marcarPresente()">Presente</button>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="student-name">Pedro González Pérez</div>
+                                <div>
+                                    <button class="btn" id="btn-ausente" onclick="marcarAusente()">Ausente</button>
+                                    <button class="btn" id="btn-presente" onclick="marcarPresente()">Presente</button>
+                                </div>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="student-name">Antonio López García</div>
+                                <div>
+                                    <button class="btn" id="btn-ausente" onclick="marcarAusente()">Ausente</button>
+                                    <button class="btn" id="btn-presente" onclick="marcarPresente()">Presente</button>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="d-grid mt-3">
+                            <button class="btn btn-success" onclick="registrarAsistencia()">Registrar asistencia</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-white fixed">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">Nuestro equipo</a>
+    </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

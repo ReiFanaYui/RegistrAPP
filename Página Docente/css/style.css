@@ -1,0 +1,169 @@
+/* Reset de estilos para asegurar la consistencia en diferentes navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales para las páginas */
+body {
+    background-color: #F2F2F2;
+    color: #929CA6;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    border: none; /* Elimina el borde predeterminado de la tarjeta */
+}
+
+.card-header {
+    background-color: #012840;
+    color: #F2F2F2;
+}
+
+.card-body {
+    background-color: #F2F2F2;
+}
+
+/* Estilos específicos para elementos de acentuación */
+h1, h2, h3 {
+    color: #F2F2F2;
+}
+
+a {
+    color: #012840;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo específico para el formulario de inicio de sesión */
+#loginForm {
+    margin-top: 20px;
+}
+
+/* Estilo específico para los botones en la lista de estudiantes */
+.btn-primary {
+    background-color: #F2A81D;
+    border-color: #F2A81D;
+}
+
+.btn-primary:hover {
+    background-color: #F2C288;
+    border-color: #F2C288;
+}
+
+.btn-success {
+    background-color: #012840;
+    border-color: #012840;
+}
+
+.btn-success:hover {
+    background-color: #F2C288;
+    border-color: #F2C288;
+}
+
+/* Estilo específico para el botón de pasar asistencia */
+.btn-danger {
+    background-color: #F2C288;
+    border-color: #F2C288;
+}
+
+.btn-danger:hover {
+    background-color: #F2A81D;
+    border-color: #F2A81D;
+}
+
+/* Estilo específico para el nombre del estudiante */
+.student-name {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilos adicionales para las líneas de la tabla */
+.custom-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid #012840; /* Color de la línea vertical y horizontal */
+    padding: 8px; /* Espaciado interno de las celdas */
+}
+
+.custom-table th {
+    background-color: #F2A81D; /* Color de fondo para las celdas del encabezado */
+    color: #012840; /* Color del texto en el encabezado */
+}
+
+/* Estilo para el enlace como botón primario */
+.custom-table a.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+}
+
+.custom-table a.btn:hover {
+    color: #012840;
+    background-color: #F2C288;
+    border-color: #F2C288;
+}
+
+/* Estilo personalizado para el margen izquierdo del logo */
+.navbar-brand {
+    margin-left: 20px;
+}
+
+.custom-navbar {
+    border-bottom: 2px solid #012840;
+}
+
+.custom-navbar .current-time {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.back-button-container {
+    position: fixed;
+    top: 50%;
+    left: 1%;
+    z-index: 1000; /* Asegura que el botón esté encima del contenido */
+}
+
+footer {
+    line-height: 30px;
+    position: fixed;
+    background-color: #012840;
+    bottom:0px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    height: 60px;
+    text-align: center;
+}
+
+#btn-ausente{
+    background-color: rgba(255, 0, 0, 0.52);
+}
+
+#btn-presente{
+    background-color: rgba(73, 153, 39, 0.52);
+}

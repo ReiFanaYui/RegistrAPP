@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Inicio de sesión</title>
+</head>
+<body class="bg-light">
+
+    <!--NAVBAR-->
+    <div>
+        <nav class="navbar custom-navbar">
+            <a class="navbar-brand">
+                <img src="/img/logo.png" width="200" height="50" class="d-inline-block align-top" alt="logo">
+            </a>
+            <span class="current-time"></span>
+        </nav>
+    </div>
+    <!--FIN NAVBAR-->
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="text-center">Inicio de sesión</h1>
+                        <h1 class="text-center">Confirmación de asistencia</h1>
+                    </div>
+                    <div class="card-body">
+                        <form id="loginForm" onsubmit="saveUsername(event)">
+                            <div class="mb-3">
+                                <label for="usuario" class="form-label">Usuario:</label>
+                                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Nombre Apellido" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contrasena" class="form-label">Contraseña:</label>
+                                <input type="password" class="form-control" id="contrasena" name="contraseña" placeholder="**********" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary">Iniciar sesión</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-white fixed">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">Nuestro equipo</a>
+    </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
