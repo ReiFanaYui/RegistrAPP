@@ -8,3 +8,13 @@
     <ion-title>asistencia</ion-title>
   </ion-toolbar>
 </ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let asistencia of asistencias">
+      <ion-label>{{ asistencia.fecha }}</ion-label>
+      <ion-label>{{ asistencia.mensaje }}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="borrarAsistencias()">Borrar Asistencias</ion-button>
+</ion-content>

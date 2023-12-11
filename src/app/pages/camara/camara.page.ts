@@ -2,16 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
 import jsQR from 'jsqr';
+import { AsistenciaService } from '../../asistencia.service';
 
 @Component({
   selector: 'app-camara',
   templateUrl: './camara.page.html',
   styleUrls: ['./camara.page.scss'],
 })
-
 export class CamaraPage implements OnInit {
 
-  constructor(private navCtrl: NavController) { }
+  constructor(private asistenciaService: AsistenciaService, private navCtrl: NavController) { }
 
   goBack() {
     this.navCtrl.back();
@@ -48,13 +48,16 @@ export class CamaraPage implements OnInit {
 
       const imageData = ctx?.getImageData(0, 0, img.width, img.height);
 
-      // Modificación aquí: manejo de 'undefined' en imageData
       const code = jsQR(imageData?.data || new Uint8ClampedArray(), imageData?.width || 0, imageData?.height || 0);
 
       if (code) {
         this.qrResult = code.data;
         console.log('QR Code result:', this.qrResult);
 
+        // Registrar la asistencia utilizando el servicio
+        this.asistenciaService.registrarAsistencia(this.qrResult);
+
+        // Abrir el resultado del código QR en una nueva ventana
         window.open(this.qrResult, '_blank');
       } else {
         this.qrResult = null;
