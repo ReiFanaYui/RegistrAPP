@@ -58,7 +58,7 @@ export class CamaraPage implements OnInit {
         this.asistenciaService.registrarAsistencia(this.qrResult);
 
         // Abrir el resultado del código QR en una nueva ventana
-        window.open(this.qrResult, '_blank');
+        (this.qrResult, '_blank');
       } else {
         this.qrResult = null;
         console.log('No QR Code detected.');
